@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="da"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SLS Tech · AI-produkter bygget, i drift og lært videre</title><meta name="description" content="Vi bygger AI-produkter og sætter dem sikkert i drift på Google Cloud, og lærer jer at bruge AI effektivt og bygge selv. Claude, ChatGPT eller Gemini."><link rel="canonical" href="https://slstech.dk/"><meta name="theme-color" content="#ffffff"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="SLS Tech"><meta property="og:title" content="SLS Tech · AI-produkter bygget, i drift og lært videre"><meta property="og:description" content="Vi bygger AI-produkter og sætter dem sikkert i drift på Google Cloud, og lærer jer at bruge AI effektivt og bygge selv. Claude, ChatGPT eller Gemini."><meta property="og:url" content="https://slstech.dk/"><meta property="og:image" content="https://slstech.dk/og-image.png"><meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#fbfaf8;--bg2:#f1f3f6;--panel:#fff;--line:#e4e7ec;--text:#14181f;--muted:#586274;--blaa:#1f6fd6;--blaa2:#185bb3;--dim:rgba(31,111,214,.08);--warm:#d9701f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,248,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.mark{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:22px;letter-spacing:-.4px;text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.mark span{width:10px;height:10px;border-radius:50%;background:var(--warm);display:inline-block}
+.links{display:flex;align-items:center;gap:22px}
+.links a{text-decoration:none;font-size:14.5px;color:var(--muted);font-weight:500}
+.links a:hover,.links a.on{color:var(--text)}
+.links a.on{box-shadow:inset 0 -2px 0 var(--blaa)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--blaa);color:#fff!important;text-decoration:none;font-weight:600;font-size:15px;padding:12px 20px;border-radius:10px;border:0;transition:background .15s}
+.btn:hover{background:var(--blaa2)}
+.btn.sm{font-size:14px;padding:9px 15px}
+.btn.ghost{background:transparent;color:var(--text)!important;border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--bg2)}
+.dd{position:relative}.ddt i{font-style:normal;font-size:11px;opacity:.7}
+.ddm{display:none;position:absolute;top:100%;left:-12px;min-width:280px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px -18px rgba(20,24,31,.35);padding:8px;z-index:60}
+.dd:hover .ddm,.dd:focus-within .ddm{display:block}
+.ddm a{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:8px;color:var(--text)!important;font-size:14px}
+.ddm a:hover{background:var(--bg2)}.ddm span{color:var(--muted);font-size:13px;white-space:nowrap}
+.dd{padding:18px 0;margin:-18px 0}
+.menu-t{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 11px;font-size:14px;font-weight:600;cursor:pointer}
+@media(max-width:760px){.dd{padding:0;margin:0}.ddm{display:block;position:static;box-shadow:none;border:0;padding:4px 0 0 10px;min-width:0}.ddt i{display:none}.links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:14px 20px 20px;gap:14px}.links.open{display:flex}.menu-t{display:block}}
+section{padding:72px 0}
+section.alt{background:var(--bg2)}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--blaa);font-weight:700;margin-bottom:12px}
+h1{font-family:Fraunces,Georgia,serif;font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-.02em;font-weight:700}
+h2{font-family:Fraunces,Georgia,serif;font-size:clamp(26px,3.6vw,36px);line-height:1.15;letter-spacing:-.01em;font-weight:700;margin-bottom:14px}
+h3{font-size:18px;font-weight:700;margin-bottom:6px}
+.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);max-width:62ch}
+.hero{padding:88px 0 72px}
+.hero .lead{margin-top:18px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;font-size:14px;color:var(--muted)}
+.facts b{display:block;color:var(--text);font-size:15px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}}
+@media(max-width:600px){.g2,.g4{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card p{color:var(--muted);font-size:15px}
+.num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--blaa);font-weight:700;margin-bottom:8px;display:block}
+.price{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:700;margin:6px 0 2px}
+.price small{font-family:Inter;font-size:13px;color:var(--muted);font-weight:500}
+.pkg{display:flex;flex-direction:column;scroll-margin-top:90px}
+.pkg ul{list-style:none;margin:14px 0 18px;flex:1}
+.pkg li{font-size:14.5px;color:var(--muted);padding:6px 0 6px 20px;position:relative;border-top:1px solid var(--line)}
+.pkg li:first-child{border-top:0}
+.pkg li:before{content:'';position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:2px;background:var(--blaa)}
+.pkg .who{font-size:14px;color:var(--text);font-weight:500}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;color:var(--blaa);background:var(--dim);border-radius:6px;padding:3px 8px}
+.feat{border:2px solid var(--blaa)}
+.more{font-weight:600;color:var(--blaa);text-decoration:none;font-size:15px}
+.more:hover{text-decoration:underline}
+.principle{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.principle:first-of-type{border-top:0}
+.principle .n{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--blaa);font-size:15px;padding-top:2px}
+.principle p{color:var(--muted);font-size:15.5px}
+.base{background:var(--text);color:#fff;border-radius:14px;padding:18px 22px;margin-bottom:10px;font-weight:600}
+.base span{color:#9fb3ff;font-family:'JetBrains Mono',monospace;font-size:12.5px;display:block;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px}
+.proj{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:800px){.proj{grid-template-columns:repeat(2,1fr)}}
+.proj a{display:block;text-decoration:none;border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}
+.proj a:hover{border-color:var(--blaa)}
+.proj b{display:block;font-size:15px}.proj span{font-size:13px;color:var(--muted)}
+.band{background:var(--blaa);color:#fff;border-radius:18px;padding:40px 32px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.band h2{margin:0;color:#fff}.band p{color:#dbe3ff;margin-top:6px}
+.band .btn{background:#fff;color:var(--blaa)!important}.band .btn:hover{background:#e9eeff}
+.band-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn.ghost-w{background:transparent;color:#fff!important;border:1px solid rgba(255,255,255,.55)}
+.btn.ghost-w:hover{background:rgba(255,255,255,.14)}
+footer{border-top:1px solid var(--line);padding:32px 0;font-size:14px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{color:var(--muted);text-decoration:none;margin-right:16px}.foot a:hover{color:var(--text)}
+/* CV */
+.cv-top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 24px -12px rgba(20,24,31,.4)}
+@media(max-width:600px){.cv-top{grid-template-columns:1fr}.avatar{width:96px;height:96px;order:-1}}
+.contact-line{margin-top:18px;font-size:14.5px;color:var(--muted);display:flex;gap:6px 18px;flex-wrap:wrap}
+.contact-line a{color:var(--text);text-decoration:none;font-weight:500}.contact-line a:hover{color:var(--blaa)}
+.stack{display:grid;grid-template-columns:190px 1fr;gap:4px 24px}
+.stack dt{font-weight:700;font-size:14.5px;padding:10px 0;border-top:1px solid var(--line)}
+.stack dd{font-size:14.5px;color:var(--muted);padding:10px 0;border-top:1px solid var(--line)}
+@media(max-width:600px){.stack{grid-template-columns:1fr}.stack dd{border-top:0;padding-top:0}}
+.job{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0}
+.job .when{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)}
+.job .co{font-size:20px;font-weight:700}
+.job .role{font-weight:600;margin-top:14px}
+.job .role:first-of-type{margin-top:4px}
+.job .role small{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);font-weight:500;margin-left:6px}
+.job ul{margin:8px 0 0 18px;color:var(--muted);font-size:15px}
+.job li{margin:4px 0}
+@media(max-width:700px){.job{grid-template-columns:1fr;gap:6px}}
+.ex{background:var(--bg2);border-radius:12px;padding:16px 18px;margin-top:12px}
+.ex b{font-size:15px}
+.small-list{list-style:none;font-size:15px;color:var(--muted)}
+.small-list li{padding:8px 0;border-top:1px solid var(--line)}
+.small-list li:first-child{border-top:0}
+.small-list b{color:var(--text)}
+.personal p{color:var(--muted);font-size:16px;max-width:66ch;margin-top:12px}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+
+.topstrip{background:var(--text);color:#fff;font-size:13.5px}
+.topstrip .in{max-width:1080px;margin:0 auto;padding:8px 20px;display:flex;gap:18px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+.topstrip a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.topstrip a:hover{color:#9fc4ff}
+.topstrip .ph{font-size:14.5px}
+.topstrip .sep{opacity:.35}
+@media(max-width:600px){.topstrip .in{justify-content:center;gap:14px}.topstrip .hideS{display:none}}
+.split{display:flex;align-items:center;gap:22px}
+.split .bar{width:1px;height:24px;background:var(--line);display:inline-block;flex:0 0 auto}
+@media(max-width:760px){.split{flex-direction:column;align-items:flex-start;gap:14px}.split .bar{display:none}}
+.need{display:block;text-decoration:none}
+.need:hover{border-color:var(--blaa)}
+.need .k{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blaa);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.need h3{margin:10px 0 6px;font-size:19px}
+.need .go{color:var(--blaa);font-weight:600;font-size:14.5px;margin-top:14px;display:block}
+.pcard{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;height:100%}
+.pcard:hover{border-color:var(--blaa)}
+.pcard .pn{font-family:Fraunces,Georgia,serif;font-size:22px;font-weight:700}
+.pcard .kick{font-size:13.5px;color:var(--blaa);font-weight:600;margin:2px 0 10px}
+.pcard p{color:var(--muted);font-size:15px}
+.pcard .go{display:block;margin-top:14px;color:var(--blaa);font-weight:600;font-size:14.5px}
+.badge{float:right;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px;background:var(--dim);color:var(--blaa)}
+.badge.live{background:#e8f6ed;color:#1c7a45}
+.badge.wip{background:#fdf0e0;color:#9a5a1a}
+.person{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start}
+@media(max-width:600px){.person{grid-template-columns:1fr}}
+.person img{width:120px;height:120px;border-radius:50%;object-fit:cover}
+.person p{color:var(--muted);font-size:16px;margin-top:10px;max-width:64ch}
+.val{list-style:none}
+.val li{padding:10px 0 10px 24px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);position:relative}
+.val li:first-child{border-top:0}
+.val li:before{content:'';position:absolute;left:2px;top:18px;width:8px;height:8px;border-radius:2px;background:var(--blaa)}
+.val b{color:var(--text)}
+.ico{width:38px;height:38px;color:var(--blaa);margin-bottom:12px;display:block}
+.chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--blaa);background:var(--dim);border-radius:100px;padding:7px 13px;margin:2px 0 16px}
+.card.need.feat{border:2px solid var(--blaa)}
+.pop{border-radius:18px;padding:30px;display:flex;flex-direction:column;height:100%;box-shadow:0 20px 50px -24px rgba(20,24,31,.4)}
+.pop-blue{background:var(--blaa);color:#fff}
+.pop-dark{background:#14181f;color:#fff}
+.pop .ico{width:44px;height:44px;color:#fff;opacity:.95;margin-bottom:16px}
+.pop .k{color:rgba(255,255,255,.72)}
+.pop h3{color:#fff;font-size:clamp(22px,2.4vw,27px);line-height:1.15;margin:6px 0 4px}
+.pop .val{margin:14px 0;flex:1}
+.pop .val li{color:#fff;border-top-color:rgba(255,255,255,.16);font-size:17.5px;padding:13px 0 13px 26px;line-height:1.4}
+.pop .val li:before{background:#fff;top:20px;width:9px;height:9px}
+.pop .chip{background:rgba(255,255,255,.18);color:#fff;margin:8px 0 20px;font-size:13px;padding:8px 15px}
+.pop .btn{background:#fff;color:#14181f!important}
+.pop .btn:hover{background:#eef1f6}
+.pop .more{color:#fff!important;opacity:.9}
+/* Services: konkrete forløb-kort */
+.svc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;height:100%}
+.svc.feat{border:2px solid var(--blaa)}
+.svc .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.svc h3{font-size:19px;margin:0}
+.svc .amt{font-family:Fraunces,Georgia,serif;font-size:20px;font-weight:700;white-space:nowrap}
+.svc .amt small{font-family:'Hanken Grotesk',sans-serif;font-size:12px;color:var(--muted);font-weight:500;display:block;text-align:right}
+.svc .who{color:var(--text);font-size:14.5px;font-weight:500;margin:8px 0 4px}
+.svc .step{list-style:none;margin:12px 0 18px;flex:1}
+.svc .step li{font-size:14.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative;border-top:1px solid var(--line)}
+.svc .step li:first-child{border-top:0}
+.svc .step li:before{content:'';position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--blaa)}
+</style></head><body><div class="topstrip"><div class="in"><a class="ph" href="tel:+4530964382">Ring 30 96 43 82</a><span class="sep hideS">·</span><a class="hideS" href="mailto:sls@slstech.dk">sls@slstech.dk</a><span class="sep">·</span><a href="https://slstech.dk/book" target="_blank" rel="noopener">Book gratis 30-min snak</a></div></div><header><div class="wrap nav"><a class="mark" href="/">SLS&nbsp;Tech<span></span></a><button class="menu-t" onclick="document.getElementById('lk').classList.toggle('open')" aria-label="Menu">Menu</button><nav class="links" id="lk"><span class="split"><a class="" href="/ydelser.html">Services</a><a class="" href="/om-sls-tech.html">Om SLS Tech</a><a class="btn sm" href="https://slstech.dk/book" target="_blank" rel="noopener">Book en snak</a><span class="bar"></span><a class="" href="/lab.html">Lab</a></span></nav></div></header>
+<section class="hero" style="padding:72px 0 56px"><div class="wrap"><div id="hg">
+<div class="eyebrow">SLS Tech · København</div>
+<h1 style="max-width:17ch">Vi bygger AI-produkter og sætter dem sikkert i drift.</h1>
+<p class="lead">Til virksomheder, der bruger AI, men ikke har egne udviklere til at gøre det ordentligt. AI-laget er bare motoren, og det kan være Claude, ChatGPT eller Gemini. Vi bygger løsningen og hoster den på Google Cloud, som I selv ejer, og lærer jer at bruge det, så I selv kan bygge videre.</p>
+<div class="cta-row"><a class="btn" href="https://slstech.dk/book" target="_blank" rel="noopener">Book en gratis snak</a><a class="btn ghost" href="tel:+4530964382">Ring 30 96 43 82</a><a class="btn ghost" href="/ydelser.html">Se hvad vi laver</a></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap"><div class="eyebrow">Det vi laver</div><h2>To klare veje</h2>
+<p class="lead" style="margin-bottom:28px">Enten lærer jeg jer at bruge AI selv, eller også bygger jeg produktet og sætter det i drift for jer. Til jer, der bruger AI, men ikke har egne udviklere til at gøre det ordentligt.</p>
+<div class="grid g2" style="gap:20px">
+<div class="pop pop-blue"><h3 style="font-size:clamp(26px,3vw,34px)">I lærer det selv</h3>
+<p style="color:rgba(255,255,255,.92);font-size:18px;line-height:1.5;margin:10px 0 6px">Jeg kommer ud og lærer jeres folk at bruge AI effektivt og sikkert, så I selv kan køre videre.</p>
+<ul class="val" style="margin:14px 0">
+<li>Et par timer hos jer, på jeres egne opgaver</li>
+<li>Prompting, omkostninger og sikkerhed</li>
+<li>I bruger det fra i morgen</li>
+</ul>
+<span class="chip">fra 1.500 kr · gratis snak først</span>
+<div class="cta-row"><a class="btn sm" href="https://slstech.dk/book" target="_blank" rel="noopener">Book en gratis snak</a><a class="more" href="/ydelser.html#undervisning" style="align-self:center">Se mere →</a></div></div>
+<div class="pop pop-dark"><h3 style="font-size:clamp(26px,3vw,34px)">Jeg gør det for jer</h3>
+<p style="color:rgba(255,255,255,.92);font-size:18px;line-height:1.5;margin:10px 0 6px">Jeg bygger jeres AI-produkt og sætter det op, så det kører online, som I selv ejer. I skal ikke selv.</p>
+<ul class="val" style="margin:14px 0">
+<li>Et rigtigt produkt, jeres folk eller kunder kan bruge</li>
+<li>Spredte værktøjer samlet ét sikkert sted</li>
+<li>Klar til at vokse, I ejer det hele</li>
+</ul>
+<span class="chip">efter aftale · gratis snak først</span>
+<div class="cta-row"><a class="btn sm" href="https://slstech.dk/book" target="_blank" rel="noopener">Book en gratis snak</a><a class="more" href="/ydelser.html#byg" style="align-self:center">Se mere →</a></div></div>
+</div>
+<p style="margin-top:24px"><a class="btn" href="/ydelser.html">Se alt vi laver og priser</a></p>
+</div></section>
+
+<section><div class="wrap"><div class="grid g2" style="gap:48px;align-items:start">
+<div><div class="eyebrow">Sådan arbejder vi</div><h2>Ordentligt fra første dag</h2>
+<p class="lead">Det samme framework i alle opgaver, store som små. Det er det, der gør, at det virker bagefter, også når vi er gået.</p></div>
+<div><div class="base"><span>Fundamentet</span>Test før live ligger under alt andet.</div>
+<div class="principle"><div class="n">01</div><div><h3>Test før live</h3><p>Alt bygges først i en sandbox, en sikker legeplads. Det går først i drift, når det er testet automatisk, gennemtestet fra start til slut og afprøvet af os som rigtig bruger. Større løsninger får et ekstra testlag.</p></div></div>
+<div class="principle"><div class="n">02</div><div><h3>Styr på sikkerheden</h3><p>Koder og nøgler ligger aldrig i selve koden. Hver bruger og hver AI-forbindelse får kun den adgang, den skal have. Fejl bliver logget og giver alarm, og brugerne ser aldrig tekniske fejlbeskeder.</p></div></div>
+<div class="principle"><div class="n">03</div><div><h3>Én kilde til sandheden</h3><p>Al kode ligger i GitHub, og der udgives kun derfra. Alt er versioneret. Går noget galt, rulles det tilbage på under 2 minutter. Daglig backup med testet gendannelse.</p></div></div>
+</div></div></div></section>
+
+<section class="alt"><div class="wrap"><div class="grid g2" style="gap:48px;align-items:center">
+<div><div class="eyebrow">Hvem vi er</div><h2>Et hold, ikke bare en konsulent</h2>
+<p class="lead">Søren driver SLS Tech og skriver selv koden. Ved siden af ham er et voksende hold af dygtige udviklere fra IT-universiteterne, som han henter ind på opgaverne. I får den samme kvalitet, uanset hvem der sidder med den.</p>
+<p style="margin-top:18px"><a class="more" href="/om-sls-tech.html">Om SLS Tech og folkene bag →</a></p></div>
+<div class="card"><ul class="small-list">
+<li><b>I ejer alt</b>, der bliver bygget. Ingen binding</li>
+<li><b>Dansk, engelsk og tysk</b></li>
+<li><b>København</b>, arbejder i hele landet</li>
+</ul></div></div></div></section>
+
+<section><div class="wrap"><div class="eyebrow">Lab · ved siden af</div><h2 style="margin-bottom:10px">Vi bygger også vores egne produkter</h2>
+<p class="lead" style="margin-bottom:20px">Kniven, afgang og Own din diabetes er vores egne, bygget på den samme standard, vi bygger jeres på. Det er vores værksted, og det er her, holdet vokser.</p>
+<p><a class="more" href="/lab.html">Se hvad vi bygger i Lab →</a></p>
+</div></section>
+<section id="kontakt"><div class="wrap"><div class="band"><div><h2>Tag fat i os</h2><p>Ring, skriv eller book et gratis møde på 30 minutter. Søren svarer selv.</p></div><div class="band-cta"><a class="btn" href="https://slstech.dk/book" target="_blank" rel="noopener">Book en snak</a><a class="btn ghost-w" href="tel:+4530964382">Ring 30 96 43 82</a><a class="btn ghost-w" href="mailto:sls@slstech.dk">sls@slstech.dk</a></div></div></div></section><footer><div class="wrap" style="display:flex;flex-direction:column;gap:16px"><div class="foot" style="border-bottom:1px solid var(--line);padding-bottom:16px"><div><b style="color:var(--text)">Referencer</b> · kunder vi har bygget for: <a href="https://www.enerkeramik.dk" target="_blank" rel="noopener">Enerkeramik</a> · <a href="https://www.illona-laursen.dk" target="_blank" rel="noopener">Illona Laursen</a> · <a href="/referencer.html">se hvad vi lavede →</a></div></div><div class="foot"><div><b style="color:var(--text)">SLS Tech</b> · København · CVR 46634640 · <a href="tel:+4530964382" style="color:var(--text)">30 96 43 82</a></div><div><a href="mailto:sls@slstech.dk">sls@slstech.dk</a><a href="https://slstech.dk/privatliv.html">Privatliv</a></div></div></div></footer></body></html>
